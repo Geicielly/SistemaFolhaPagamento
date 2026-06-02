@@ -25,8 +25,8 @@ public double calcularSalarioFinal (){
 }
 
 @Override public String toString(){
-    return "Nome: " + getNomeCompleto()+ "\tMatricula " + getMatricula() + 
-    "\tSalario Fixo: R$ " + SALARIO_BASE + "\tProdução: R$ " + calcularProducao() + "\t\tSalário final: R$ "+ calcularSalarioFinal();
+    return "Nome: " + getNomeCompleto()+ "\t\tMatricula " + getMatricula() + 
+    "\t\tSalario Fixo: R$ " + SALARIO_BASE + "\t\tProdução: R$ " + calcularProducao() + "\t\tSalário final: R$ "+ calcularSalarioFinal();
 
  }
 

@@ -31,8 +31,8 @@ public class FuncionarioPadrao {
   
     
  @Override public String toString(){
-    return "Nome: " + nomeCompleto + "\tMatricula " + matricula + 
-    "\tSalario Fixo: R$ " + SALARIO_BASE + "\tExtras: 0.0 " + "\t\tSalário final: R$ "+ calcularSalarioFinal();
+    return "Nome: " + nomeCompleto + "\t\tMatricula " + matricula + 
+    "\t\tSalario Fixo: R$ " + SALARIO_BASE + "\t\tExtras: 0.0 " + "\t\tSalário final: R$ "+ calcularSalarioFinal();
  }
 
 }

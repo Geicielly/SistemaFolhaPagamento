@@ -12,9 +12,9 @@ public static void main(String[] args) {
     do{
         exibirMenu();
         if    (!entrada.hasNextInt()) {
-                System.out.println("Digite apenas números de 0 a 4.");
+                System.out.println("Escolha opções de 0 a 4.");
                 entrada.nextLine();
-                continue;}
+        }
                 opcao = entrada.nextInt();
                 entrada.nextLine();
         switch (opcao) {
@@ -50,7 +50,7 @@ public static void main(String[] args) {
     }
 
         private static void exibirMenu() {
-        System.out.println("Escolha uma Opção");
+        System.out.println("\nEscolha uma Opção\n");
         System.out.println("\n====== FOLHA DE PAGAMENTO =====\n");
         System.out.println("1 - Cadastrar funcionário padrão.");
         System.out.println("2 - Cadastrar funcionário comissionado.");
@@ -62,39 +62,144 @@ public static void main(String[] args) {
         }
 
 private static void cadastrarFuncionarioPadrao(){
-    System.out.println("\nCadastro de funcinário padrao");
-    System.out.println("digite o nome:");
+    System.out.println("\nCadastro de Funcinário Padrão\n");
+
+    System.out.println("Digite o nome:");
     String nomeCompleto = entrada.nextLine().trim();
-    System.out.println("digite a matrícula");
+
+    //Verificação de espaço vazio ou contém números no nome
+    while (nomeCompleto.isEmpty() || nomeCompleto.matches(".*\\d.*")) {
+
+        if (nomeCompleto.isEmpty()) {
+            System.out.println("\nO campo nome não pode ficar vazio.\n");
+        } else {
+            System.out.println("\nO nome não pode conter números.\n");
+        }
+        System.out.println("Digite o nome:");
+        nomeCompleto = entrada.nextLine().trim();
+    }
+
+    System.out.println("\nDigite a matrícula:");
     int matricula = entrada.nextInt();
+
+        //Verificação se o número de matrícula é negativo
+        while (matricula < 0) {
+     System.out.println("\nDigite um valor maior ou igual a 0.\n");
+     System.out.println("Digita novamente a Matricula:");
+            matricula = entrada.nextInt();
+        }
+
     funcionarios.add(new FuncionarioPadrao(matricula,nomeCompleto));
-    System.out.println("Funcionário cadastrado com sucesso!");
+    System.out.println("\nFuncionário cadastrado com sucesso!");
 }
+
 private static void cadastrarFuncionarioComissionado(){
-    System.out.println("\nCadastro de funcinário comissionado");
-    System.out.println("digite o nome:");
+    System.out.println("\nCadastro de Funcinário Comissionado\n");
+
+    System.out.println("Digite o nome:");
     String nomeCompleto = entrada.nextLine().trim();
-    System.out.println("digite a matrícula");
+
+    //Verificação de espaço vazio ou contém números no nome
+    while (nomeCompleto.isEmpty() || nomeCompleto.matches(".*\\d.*")) {
+
+        if (nomeCompleto.isEmpty()) {
+            System.out.println("\nO campo nome não pode ficar vazio.\n");
+        } else {
+            System.out.println("\nO nome não pode conter números.\n");
+        }
+        System.out.println("Digite o nome:");
+        nomeCompleto = entrada.nextLine().trim();
+    }
+
+    System.out.println("\nDigite a matrícula");
     int matricula = entrada.nextInt();
-    System.out.println("Digite o valor das vendas");
+
+    //Verificação se o número de matrícula é negativo
+        while (matricula < 0) {
+     System.out.println("\nDigite um valor maior ou igual a 0.\n");
+     System.out.println("\nDigita novamente a Matricula:");
+            matricula = entrada.nextInt();
+        }
+
+    System.out.println("\nDigite o valor das vendas:");
     double valorVendas = entrada.nextDouble();
-    System.out.println("Digite o percentual da comissão");
+
+    //Verificação se o valor de vendas é negativo
+
+        while (valorVendas < 0) {
+    System.out.println("\nDigite um valor maior ou igual a 0.\n");
+    System.out.println("Digita novamente o valor das vendas:");
+        
+         valorVendas = entrada.nextDouble();
+    }
+
+    System.out.println("\nDigite o percentual da comissão");
     double percentualComissao = entrada.nextDouble();
+
+    //Verificação se o valor de Comissão é negativo
+        while (percentualComissao < 0) {
+    System.out.println("\nDigite um valor maior ou igual a 0.\n");
+    System.out.println("Digita novamente o percentual da comissão: ");
+
+         percentualComissao = entrada.nextDouble();
+    }
+
     funcionarios.add(new FuncionarioComissionado(matricula, nomeCompleto, valorVendas, percentualComissao));
-    System.out.println("Funcionário cadastrado com sucesso!");
+    System.out.println("\nFuncionário cadastrado com sucesso!");
 }
 private static void cadastroFuncionarioProducao(){
-    System.out.println("\n Cadastro de funcinário de produção");
-    System.out.println("digite o nome:");
+    System.out.println("\n Cadastro de funcinário de produção\n");
+
+    System.out.println("Digite o nome:");
     String nomeCompleto = entrada.nextLine().trim();
-    System.out.println("digite a matrícula");
+    
+   //Verificação de espaço vazio ou contém números no nome
+    while (nomeCompleto.isEmpty() || nomeCompleto.matches(".*\\d.*")) {
+
+        if (nomeCompleto.isEmpty()) {
+            System.out.println("\nO campo nome não pode ficar vazio.\n");
+        } else {
+            System.out.println("\nO nome não pode conter números.\n");
+        }
+        System.out.println("Digite o nome:");
+        nomeCompleto = entrada.nextLine().trim();
+    }
+
+    System.out.println("\nDigite a matrícula");
     int matricula = entrada.nextInt();
-    System.out.println("Digite a quantidade de peças");
+
+     //Verificação se o número de matrícula é negativo
+        while (matricula < 0) {
+     System.out.println("\nDigite um valor maior ou igual a 0.\n");
+     System.out.println("\nDigita novamente a Matricula:");
+            matricula = entrada.nextInt();
+        }
+
+    System.out.println("\nDigite a quantidade de peças:");
     int quantidadePecas = entrada.nextInt();
-    System.out.println("Digite o valor de cada peça");
+
+     //Verificação se o número de peças é negativo
+        while (quantidadePecas < 0) {
+     System.out.println("\nDigite um valor maior ou igual a 0.\n");
+     System.out.println("\nDigite novamente a quantidade de peças: \n");
+
+         quantidadePecas = entrada.nextInt();
+    
+}
+
+    System.out.println("\nDigite o valor de cada peça:");
     double valorPeca = entrada.nextDouble();
+
+     //Verifica se é negativo
+    while (valorPeca < 0) {
+    System.out.println("\nDigite um valor maior ou igual a 0.\n");
+    System.out.println("Digite novamente o valor de cada peça:\n");
+
+    valorPeca = entrada.nextDouble();
+}
+
     funcionarios.add(new FuncionarioProducao(matricula, nomeCompleto, quantidadePecas, valorPeca));
-    System.out.println("Funcionário cadastrado com sucesso!");
+    System.out.println("\nFuncionário cadastrado com sucesso!");
 }
 
 private static void gerarFolhaPagamento(){
@@ -106,7 +211,11 @@ private static void gerarFolhaPagamento(){
     }
     
     for (int i = 0; i < funcionarios.size(); i++) {
+        System.out.println("------------------------------------------------------");
+        System.out.println("Funcionário " + (i + 1));
+        System.out.println("------------------------------------------------------");
         System.out.println(funcionarios.get(i));
+        System.out.println();
     }
 }
 }

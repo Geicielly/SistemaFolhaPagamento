@@ -28,8 +28,8 @@ public class FuncionarioComissionado extends FuncionarioPadrao {
 
 
  @Override public String toString(){
-    return "Nome: " + getNomeCompleto()+ "\tMatricula " + getMatricula() + 
-    "\tSalario Fixo: R$ " + SALARIO_BASE + "\tComissão: R$ " + calcularComissao() + "\t\tSalário final: R$ "+ calcularSalarioFinal();
+    return "Nome: " + getNomeCompleto()+ "\t\tMatricula " + getMatricula() + 
+    "\t\tSalario Fixo: R$ " + SALARIO_BASE + "\t\tComissão: R$ " + calcularComissao() + "\t\tSalário final: R$ "+ calcularSalarioFinal();
 
  }
 }
