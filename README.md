@@ -1,27 +1,26 @@
 # Sistema de Folha de Pagamento em Java
 
-Este projeto foi desenvolvido como atividade acadêmica com o objetivo de criar um sistema simples para cadastro de funcionários e cálculo de folha de pagamento.
+Projeto desenvolvido inicialmente como atividade acadêmica e evoluído como projeto pessoal de portfólio.
 
 A proposta do sistema é ajudar uma empresa a organizar melhor as informações dos seus colaboradores, padronizando o cadastro e facilitando o cálculo dos salários de acordo com o tipo de funcionário.
 
 ## Objetivo do Projeto
 
-O objetivo principal deste projeto é praticar conceitos fundamentais da linguagem Java, aplicando a Programação Orientada a Objetos em um sistema simples de folha de pagamento.
+O objetivo é praticar Java, Programação Orientada a Objetos, ArrayList, validações de entrada, cálculo de folha de pagamento e organização de código em um sistema executado pelo terminal.
 
-O sistema busca representar uma situação próxima da realidade de uma empresa, onde diferentes tipos de funcionários podem possuir formas diferentes de remuneração, como salário fixo, comissão ou pagamento por produção.
 
 ## Funcionalidades
 
 O sistema permite:
 
 * Cadastrar informações básicas dos funcionários;
-* Trabalhar com diferentes tipos de funcionários;
 * Calcular salário de funcionário padrão;
 * Calcular pagamento de funcionário comissionado;
-* Calcular pagamento de funcionário por produção;
+* Calcular pagamento de funcionário de produção;
 * Exibir as informações da folha de pagamento no terminal;
-* Aplicar validações simples para evitar dados inválidos, como valores negativos.
+* Aplicar validações simples para evitar dados inválidos como números negativos, nome vazio ou nome com número.
 
+  
 ## Tipos de Funcionários
 
 O projeto possui diferentes classes para representar os tipos de funcionários.
@@ -41,9 +40,8 @@ Funcionário que recebe de acordo com a quantidade produzida e o valor pago por 
 ## Tecnologias Utilizadas
 
 * Java
-* Scanner para entrada de dados
-* Programação Orientada a Objetos
-* IDE utilizada: VS Code
+* Git
+* GitHub
 
 ## Conceitos Praticados
 
@@ -58,6 +56,7 @@ Durante o desenvolvimento do projeto, foram praticados os seguintes conceitos:
 * Estruturas de repetição;
 * Validação de dados;
 * Herança;
+* ArrayList;
 * Organização do código em arquivos separados.
 
 ## Estrutura do Projeto
@@ -121,12 +120,19 @@ Depois do preenchimento, o sistema exibe a folha de pagamento com os dados organ
 Exemplo de saída no terminal:
 
 ```text
+
 ==== FOLHA DE PAGAMENTO ====
 
 ------------------------------------------
-Nome: Maria      Matrícula: 1001     Extras: R$ 0.0     Salário: R$ 2500.00
+Nome: Maria      Matrícula: 1001     Salário Fixo: R$ 2000.00     Extras: R$ 0.0     Salário final: R$ 2000.00
 ------------------------------------------
+
 ```
+## Status do Projeto
+
+Projeto em evolução para portfólio.
+
+A versão atual executa no terminal, permite cadastrar funcionários, aplicar validações simples e gerar a folha de pagamento. Novas melhorias serão adicionadas aos poucos, com commits organizados.
 
 ## Importância do Sistema para uma Empresa
 
@@ -134,26 +140,9 @@ Este sistema pode ajudar uma empresa a organizar melhor o cadastro dos funcioná
 
 Com o uso do sistema, as informações dos colaboradores ficam mais padronizadas, e os cálculos podem ser realizados de forma mais clara e organizada, de acordo com o tipo de funcionário cadastrado.
 
-Mesmo sendo uma versão inicial, o projeto apresenta uma base funcional que pode ser expandida futuramente com novos recursos, como cadastro de vários funcionários, armazenamento em arquivos, relatórios e interface gráfica.
+Mesmo sendo uma versão inicial, o projeto apresenta uma base funcional que pode ser expandida futuramente com recursos como busca por matrícula, remoção de funcionários, edição de dados, armazenamento em arquivos, relatórios mais completos e interface gráfica.
 
-## Melhorias Futuras
 
-Algumas melhorias que podem ser adicionadas futuramente:
+## Autora
 
-* Criar um menu interativo;
-* Permitir o cadastro de vários funcionários;
-* Utilizar ArrayList para armazenar os funcionários;
-* Salvar os dados em arquivo;
-* Adicionar tratamento de erros com try/catch;
-* Criar relatórios mais completos;
-* Desenvolver uma interface gráfica.
-
-## Autores
-
-Projeto desenvolvido por:
-
-* Geicielly - https://github.com/Geicielly
-* Rafael - https://github.com/rafael296santos
-* Thalles - https://github.com/thallesedu-cpu
-
-Este projeto faz parte dos estudos em Java e Programação Orientada a Objetos.
+Desenvolvido por [Geicielly](https://github.com/Geicielly).
